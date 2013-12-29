@@ -1,4 +1,6 @@
 Tipy::Application.routes.draw do
+  get "tips/new"
+  get "tips/calculate"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

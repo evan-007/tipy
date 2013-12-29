@@ -1,2 +1,27 @@
-<h1>Tips#new</h1>
-<p>Find me in app/views/tips/new.html.erb</p>
+<h1>How much is the tip?</h1>
+<ul>
+	<p>Enter your meal info:</p>
+</ul>
+	<%= form_tag('/tips/calculate') do %>
+<ul>
+	<%= label_tag("Meal price:") %>
+</ul>
+<ul>
+	<%= text_field_tag(:price, nil, placeholder: "Enter cost without tax and tip") %>
+</ul>
+<ul>
+	<%= label_tag("Tip:") %>
+</ul>
+<ul>
+	<%= text_field_tag(:tip, nil, placeholder: "Enter tip (i.e. 15 for 15%)") %>
+</ul>
+<ul>
+	<%= label_tag("Tax") %>
+</ul>
+<ul>
+	<%= text_field_tag(:tax, nil, placeholder: "Enter tax (i.e. 5 for %5)") %>
+</ul>
+<ul>
+	<%= submit_tag 'Calculate' %>
+</ul>
+<% end %>
